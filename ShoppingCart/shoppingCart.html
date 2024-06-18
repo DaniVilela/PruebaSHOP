@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - Ghiafer Store</title>
+    <link rel="icon" href="../imgs/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Templates/GlobalStyles.css">
+    <link rel="stylesheet" href="shoopingCart.css">
+</head>
+
+<body>
+    <!--Header-->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav>
+                        <div class="logo">
+                            <a href="../index.html">
+                                <img src="../imgs/logo.png">
+                            </a>
+                        </div>
+                        <div class="menu-toggle" id="mobile-menu">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                        <ul class="nav-links">
+                            <li><a href="../index.html"><i class="fas fa-home"></i>Inicio</a></li>
+                            <li><a href="../Products/allProducts.html"><i class="fas fa-box"></i>Productos</a></li>
+                            <div class="profile">
+                                <a href="#"><i class="fas fa-user"></i> Iniciar Sesión</a>
+                            </div>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--Main content-->
+    <main>
+        <div class="container d-flex justify-content-center align-items-center min-vh-100">
+            <div class="row w-100">
+                <div class="table-custom">
+                    <table class="table text-center">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Unidades</th>
+                                <th>Total</th>
+                                <th class="th-icon"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-table-body" class="t-body">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="text-end btn-custom2">
+                    <p id="cart-subtotal"></p>
+                    <p id="cart-total" class="fw-bold fs-4"></p>
+                    <button class="btn"><a href="../PurchasingProcess/purchasingProccess.html">Ir al procedimiento
+                            de compra</a></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!--Footer-->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Todos los derechos reservado por <strong>Ghiafer Store</strong></p>
+            <ul class="socials">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!--Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="../Templates/GlobalScripts.js"></script>
+    <script src="shoppingCart.js"></script>
+</body>
+
+</html>

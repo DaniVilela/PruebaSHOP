@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #0073b1;
+    --secondary-color: #313335;
+    --background-color: #181A1B;
+    --text-color: #333333;
+    --button-background: #0073b1;
+    --social-color: #ffffff;
+    --Header: #CDE8E5;
+    --nav: #4D869C;
+    --bar-icon-color: #80807F;
+    --body-color:#EEF7FF;
+    --footer-color:#4D869C;
+    --footer-text-color: #C0BAB2;
+    --font-family-sans-serif: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-serif: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+    --font-color-titles:#C0BAB2;
+    --font-color-text: #E8E6E3;
+    --hover-background-color: #282C2F;
+}
+   
+
+body {
+    margin: 0;
+    font-family: var(--font-family-sans-serif);
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-serif);
+    color: var(--font-color-titles);
+}
+code, pre {
+    font-family: 'SFMono-Regular', Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+header {
+    background-color: var(--background-color);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 2rem 0 1rem ;
+}
+
+.logo img {
+    height: 100px; /* Ajusta la altura según sea necesario */
+    width: auto;
+}
+.profile {
+    color: var(--button-color);
+    font-size: 16px;
+    text-align: center;
+    flex: 1;
+}
+
+.profile a {
+    color: var(--nav);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin: .5rem;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    margin: 2px 0;
+    background-color: var(--bar-icon-color);
+
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-links li a {
+    color: var(--font-color-titles);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    margin: 0;
+    transition: background-color 0.3s ease; /* Añadir transición suave */
+}
+
+.nav-links li a i {
+    margin-right: 8px;
+}
+
+.nav-links li a:hover, 
+.profile a:hover {
+    background-color: var(--hover-background-color); /* Color de fondo específico */
+    border-radius: 5px; /* Opcional: añade bordes redondeados */
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+        align-items: start;
+        padding: 0%;
+        transform: translateY(-20px); /* Desplazado hacia arriba */
+        animation: fadeIn 1.3s forwards; /* Animación de aparición */
+    }
+    @keyframes fadeIn {
+        to {
+            opacity: 1; /* Aparece */
+            transform: translateY(0); /* Se desplaza a la posición original */
+        }
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .profile {
+        margin-bottom: 10px;
+    }
+}
+
+footer {
+    background-color: var(--background-color);
+    padding: 20px;
+    text-align: center;
+    color: var(--footer-text-color);
+    margin-top: 15px;   
+    border-top: 1px solid var(--font-color-titles); /* Agregar borde superior */
+    padding-top: 20px; /* Espacio para separar el contenido del borde */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.footer-content .socials {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.footer-content .socials li {
+    display: inline;
+}
+
+.footer-content .socials li a {
+    color: var(--social-color);
+    text-decoration: none;
+    font-size: 20px;
+}

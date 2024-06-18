@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #0073b1;
+    --secondary-color: #313335;
+    --background-color: #181A1B;
+    --border-shadow-box:  rgba(249, 246, 246, 0.6);
+    --text-color: #333333;
+    --button-color: #ffffff;
+    --Header: #CDE8E5;
+    --nav: #4D869C;
+    --body-color:#EEF7FF;
+    --font-family-sans-serif: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-serif: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+    --font-color-titles:#C0BAB2;
+    --font-color-text: #E8E6E3;
+    --hover-background-color: #282C2F;
+}
+.detailsProduct h2{
+    color: var(--font-color-titles);
+
+}
+.detailsProduct p{
+    color: var(--font-color-text);
+    font-size: 1.5rem;
+}
+
+.list-unstyled li{
+    color: var(--font-color-text);
+}
+.card-footer button{
+    background-color: var(--background-color);
+    color: var(--button-color);
+    box-shadow: 0px 0px 10px rgba(249, 246, 246, 0.6);
+    border: 1px;
+    border-radius: 4px;
+    padding: 10px 50px;
+    margin-bottom: 10px ;
+    width: 80%;
+    font-family: var(--font-family-sans-serif);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.card-footer button a{
+    color: var(--font-color-text);
+    text-decoration: none;
+
+}
+.detailsProduct button:hover {
+    background-color: var(--hover-background-color);
+}
+
+.quantity-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.quantity-btn {
+    background-color: var(--background-color);
+    color: var(--button-color);
+    box-shadow: 0px 0px 4px var(--border-shadow-box);
+    border: 1px;
+    border-radius: .3rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+#quantity {
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    margin: 0 10px;
+    font-size: 1.1rem;
+    color: var(--font-color-text);
+    background-color: var(--background-color);
+}
+
+/*para tamaños pequeños agregar margin top*/
+@media (max-width: 765px){
+
+main {
+    margin-top: 1.2rem;
+}    
+footer{
+    margin-top: 2rem;
+    display: flex;
+    align-items: end;
+}
+}
+@media (max-height: 640px){
+    main {
+        margin-top: 5rem;
+    }    
+    footer{
+        margin-top: 5rem;
+        display: flex;
+        align-items: end;
+    }
+}

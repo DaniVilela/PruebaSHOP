@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #0073b1;
+    --secondary-color: #313335;
+    --background-color: #181A1B;
+    --text-color: #333333;
+    --button-background: #0073b1;
+    --social-color: #ffffff;
+    --Header: #CDE8E5;
+    --nav: #4D869C;
+    --bar-icon-color: #80807F;
+    --body-color:#EEF7FF;
+    --footer-color:#4D869C;
+    --footer-text-color: #C0BAB2;
+    --font-family-sans-serif: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-serif: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+    --font-color-titles:#C0BAB2;
+    --font-color-text: #E8E6E3;
+    --hover-background-color: #282C2F;
+    --border-shadow-box:  rgba(249, 246, 246, 0.3);
+}
+
+.form-pedido label{
+    color: var(--font-color-text);
+
+}
+.list-group-item{
+    background-color: var(--background-color);
+    border: none;
+    border-radius: 0 !important;
+    border-bottom: 0.1px solid var(--bar-icon-color);
+
+}
+.list-group-item div{
+    color: var(--font-color-text);
+}
+.summary-totals p{
+    color: var(--font-color-text);
+    display: flex;
+    justify-content: center;
+}
+
+/*para los input*/
+.input-custom:focus {
+    background-color: var(--background-color);
+    border: 1px;
+    color: var(--font-color-titles);
+    box-shadow: 0px 0px 10px var(--border-shadow-box);
+  }
+.input-custom::placeholder{
+    color: var(--border-shadow-box);
+}
+
+.input-custom{
+    background-color: var(--background-color);
+    color: var(--font-color-text);
+    border: none;
+    border-radius: 0;
+    border-bottom: 0.1px solid var(--bar-icon-color);
+}
+.input-group-text{
+    background-color:var(--background-color);
+    color: var(--font-color-text);
+    border: none;
+}
+
+/*para el boton de realizar orden*/
+.form-pedido button{
+    background-color: var(--background-color);
+    color: var(--font-color-text);
+    text-decoration: none;
+    box-shadow: 0px 0px 10px var(--border-shadow-box);
+    border: 1px;
+    border-radius: 4px;
+    padding: 10px 50px;
+    margin-bottom: 10px ;
+    width: auto;
+    font-family: var(--font-family-sans-serif);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.form-pedido button:hover {
+    background-color: var(--hover-background-color);
+    color: var(--font-color-titles);
+}
+.btn-custom{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+@media (max-width: 576px){
+.row .summary{
+    margin-bottom: 2rem;    
+    }
+}
