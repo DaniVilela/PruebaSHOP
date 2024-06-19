@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Mostrar la imagen, nombre y precio del producto
   document.getElementById("imagen-detalle").src = imagen;
   document.getElementById("nombre-producto").textContent = nombre;
-  document.getElementById("precio-producto").textContent = precio;
+  document.getElementById("precio-producto").textContent = "S/. " + precio;
 
   //para añadir la cantidad de productos al carro
   const decreaseQuantityBtn = document.getElementById("decrease-quantity");
