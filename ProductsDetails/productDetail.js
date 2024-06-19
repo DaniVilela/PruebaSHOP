@@ -61,8 +61,19 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCartCount();
     saveCartToLocalStorage();
   });
-
   updateCartCount();
+  const addCartButon = document.getElementById("add-to-cart-btn");
+  addCartButon.addEventListener("click", (event) => {
+    event.preventDefault();
+    // Cambiar el texto del botón a "Producto Agregado" temporalmente
+    addCartButon.textContent = "Producto agregado";
+    setTimeout(() => {
+      // Volver al texto original "Agregar" después de 1 segundo
+      addCartButon.textContent = "Agregar";
+      addCartButon.innerHTML = "Agregar";
+      addCartButon.innerHTML += ' <i class="fas fa-shopping-cart"></i>';
+    }, 500);
+  });
 });
 
 // Función para obtener el valor de un parámetro de la URL
