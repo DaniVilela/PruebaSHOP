@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const productCountElement = document.getElementById("product-count");
   const productTotalElement = document.getElementById("product-total");
   const totalCostElement = document.getElementById("total-cost");
-  const shippingCost = 12.0;
+  const shippingCostElement = document.getElementById("shipping-cost");
+  let shippingCost = 0;
   let cart = JSON.parse(localStorage.getItem("checkoutCart")) || [];
 
   const updateCartSummary = () => {
@@ -15,6 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const total = parseFloat(product.precio) * product.cantidad;
       productTotal += total;
       productCount += product.cantidad;
+      if (productCount > 3) {
+        shippingCost = 20.0;
+      } else if (productCount > 2) {
+        shippingCost = 15.0;
+      } else {
+        shippingCost = 10.0;
+      }
 
       const cartItem = document.createElement("div");
       cartItem.classList.add("list-group-item");
@@ -32,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
           `;
       cartItemsContainer.appendChild(cartItem);
     });
-
+    shippingCostElement.innerText = shippingCost.toFixed(2);
     productCountElement.textContent = productCount;
     productTotalElement.textContent = productTotal.toFixed(2);
     totalCostElement.textContent = (productTotal + shippingCost).toFixed(2);

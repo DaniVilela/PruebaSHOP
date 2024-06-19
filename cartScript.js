@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Limpiar localStorage para desarrollo
-
   const cartCountElement = document.getElementById("cart-count");
+  // Recuperamos el carrito del localStorage
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
   const updateCartCount = () => {
@@ -12,32 +11,37 @@ document.addEventListener("DOMContentLoaded", () => {
   const saveCartToLocalStorage = () => {
     localStorage.setItem("cart", JSON.stringify(cart));
   };
-
+  // Seleccionamos el botón de agregar al carrito
   document.querySelectorAll(".add-to-cart").forEach((button) => {
     button.addEventListener("click", (event) => {
       event.preventDefault();
-
+      // Recopilamos los datos del producto desde los atributos data
       const imagen = button.getAttribute("data-imagen");
       const nombre = button.getAttribute("data-nombre");
       const precio = button.getAttribute("data-precio");
 
+      // Creamos un objeto de producto
       const product = {
         imagen,
         nombre,
         precio,
         cantidad: 1,
       };
-
+      // Buscamos si el producto ya está en el carrito
       const existingProduct = cart.find(
         (item) => item.nombre === product.nombre
       );
+      // Si el producto ya está en el carrito, incrementamos la cantidad
       if (existingProduct) {
         existingProduct.cantidad += 1;
-      } else {
+      }
+      // Si el producto no está en el carrito, lo agregamos
+      else {
         cart.push(product);
       }
-
+      //Actualizamos la cantidad de items en el carrito del navbar Carrito(count)
       updateCartCount();
+      // Guardamos el carrito actualizado en el localStorage
       saveCartToLocalStorage();
 
       // Cambiar el texto del botón a "Producto Agregado" temporalmente

@@ -143,6 +143,9 @@ nav {
         margin-bottom: 10px;
     }
 }
+.socials h5{
+    font-family: var(--font-family-sans-serif);
+}
 
 footer {
     background-color: var(--background-color);

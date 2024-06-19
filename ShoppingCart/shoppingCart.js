@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartSubtotal = document.getElementById("cart-subtotal");
   const cartTotal = document.getElementById("cart-total");
   const checkoutButton = document.querySelector(".btn a"); // Selecciona el botón de checkout
+  // Recuperamos el carrito del localStorage
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
   const updateCartDisplay = () => {
